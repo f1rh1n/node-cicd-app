@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd /home/ec2-user/my-node-app
+
+# Kill existing Node.js process if any
+pkill node || true
+
+# Run in background
+nohup npm start > output.log 2>&1 &
